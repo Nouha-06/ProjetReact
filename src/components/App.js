@@ -5,6 +5,7 @@ import ShoppingList from './ShoppingList';
 import logo from '../asserts/logo.png'
 import Footer from './Footer';
 import { useState } from 'react'
+import "../styles/App.css"
 function App() {
   const [cart, updateCart] = useState([])
   
