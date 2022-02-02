@@ -3,7 +3,7 @@ import '../styles/PlantItem.css'
 function PlantItem({name,cover,id,water,light}){
 return (
    <div className='lmj-plant-item'>
-         <li key={id} onClick={()=>handleClick(name)}>
+         <li key={id} onClick={handleClick}>
 			<img className="lmj-plant-item-cover" src={cover} alt={`${name} cover`} />		
 		    {name}
             <div>
@@ -14,7 +14,7 @@ return (
    </div>
 );
 }
-function handleClick(plantName) {
-    alert(`Vous voulez acheter 1 ${plantName} ? Très bon choix 🌱✨`)
+function handleClick(e) {
+    console.log('✨ Ceci est un clic ✨',e)
 }
 export default PlantItem;
