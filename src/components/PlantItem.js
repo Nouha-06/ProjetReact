@@ -1,6 +1,6 @@
 import CareScale from "./CareScale";
 import '../styles/PlantItem.css'
-function PlantItem({name,cover,id,water,light}){
+function PlantItem({name,cover,id,water,light,price}){
 return (
    <div className='lmj-plant-item'>
          <li key={id} onClick={handleClick}>
@@ -9,12 +9,14 @@ return (
             <div>
             <CareScale careType='water' scaleValue={water} />
             <CareScale careType='light' scaleValue={light} />
+            {price + "€"}
             </div>
+            
          </li>        
    </div>
 );
 }
-function handleClick(e) {
-    console.log('✨ Ceci est un clic ✨',e)
+function handleClick() {
+    console.log('✨ Ceci est un clic ✨')
 }
 export default PlantItem;
