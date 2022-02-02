@@ -1,4 +1,5 @@
 import { plantList } from "../datas/plantList";
+import PlantItem from "./PlantItem";
 function ShoppingList(){
     const categories = plantList.reduce(
 		(acc, plant) =>
@@ -15,7 +16,7 @@ function ShoppingList(){
 			</ul>
 			<ul>
 				{plantList.map((plant) => (
-					<li key={plant.id}>{plant.isBestSale && <span> {plant.name}👍</span>}</li>
+					<PlantItem name={plant.name} cover={plant.cover} id={plant.id} water={plant.light} light={plant.water}/>
 				))}
 			</ul>
 		</div>
